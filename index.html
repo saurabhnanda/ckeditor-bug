@@ -1,0 +1,13 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="/dist/custom-ckeditor.js" type="text/javascript"></script>
+</head>
+<body>
+  <textarea class="rte-editor" id="rte-editor"></textarea>
+  <script>
+    window.CustomCKEditor.create(document.getElementById("rte-editor")).then(function(editor) {
+      editor.setData('<strong>foobar</strong>');
+    })
+  </script>
+</body>
