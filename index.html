@@ -7,7 +7,14 @@
   <textarea class="rte-editor" id="rte-editor"></textarea>
   <script>
     window.CustomCKEditor.create(document.getElementById("rte-editor")).then(function(editor) {
-      editor.setData('<strong>foobar</strong>');
+      // this works...
+      editor.setData('string without HTML');
+
+      // but this doesn't work
+      setInterval(function() {
+        editor.setData('<strong>foobar</strong>');
+      }, 5000);
+      
     })
   </script>
 </body>
