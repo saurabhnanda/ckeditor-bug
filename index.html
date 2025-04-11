@@ -8,7 +8,7 @@
   <script>
     window.CustomCKEditor.create(document.getElementById("rte-editor")).then(function(editor) {
       // this works...
-      editor.setData('string without HTML');
+      editor.setData('string without HTML that works... wait for 5 seconds and check JS console for the error when using setData with a string containing HTML tags');
 
       // but this doesn't work
       setInterval(function() {
